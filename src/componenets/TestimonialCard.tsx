@@ -1,6 +1,5 @@
 interface TestimonialProps {
   name: string;
-  title: string;
   quote: string;
   content: string;
   avatarUrl: string;
@@ -9,7 +8,6 @@ interface TestimonialProps {
 
 export default function TestimonialCard({
   name,
-  title,
   quote,
   content,
   avatarUrl,
@@ -17,31 +15,37 @@ export default function TestimonialCard({
 }: TestimonialProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-lg p-8 shadow-lg transition-all duration-300 hover:shadow-xl ${className}`}>
-      {name.includes('Daniel') ? (
+      className={`relative h-full p-[32px] rounded-[8px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] ${className}`}>
+      {name.includes('Daniel') && (
         <img
           alt='bg-pattern-quotation'
           src='/bg-pattern-quotation.svg'
-          className='absolute right-20 top-0 h-28 w-28 opacity-80 z-8'
+          className='absolute right-[80px] top-0 w-[104px] h-[102px] opacity-70 z-0'
         />
-      ) : null}
-      <div className='flex items-center gap-4'>
-        <img
-          src={avatarUrl}
-          alt={name}
-          className='h-8 w-8 rounded-full border-2 border-opacity-50 object-cover'
-        />
-        <div>
-          <h3 className='font-semibold leading-tight text-inherit '>{name}</h3>
-          <p className='text-[13px] text-inherit opacity-50'>{title}</p>
+      )}
+      <div className='relative z-10'>
+        <div className='flex items-center gap-[16px] mb-[18px]'>
+          <img
+            src={avatarUrl}
+            alt={name}
+            className='h-[28px] w-[28px] rounded-full border-2 border-opacity-50'
+          />
+          <div>
+            <h3 className='font-medium text-[13px] leading-[13px] text-inherit'>
+              {name}
+            </h3>
+            <p className='text-[11px] leading-[11px] mt-1 text-inherit opacity-50'>
+              Verified Graduate
+            </p>
+          </div>
         </div>
+        <p className='text-[20px] font-semibold leading-[24px] text-inherit mb-[16px]'>
+          {quote}
+        </p>
+        <p className='text-[13px] leading-[18px] text-inherit opacity-70'>
+          " {content} "
+        </p>
       </div>
-      <p className='mt-4 text-xl font-semibold leading-tight text-inherit max-w[50px]'>
-        {quote}
-      </p>
-      <p className='mt-4 text-[13px] leading-relaxed text-inherit opacity-70'>
-        "{content}"
-      </p>
     </div>
   );
 }
