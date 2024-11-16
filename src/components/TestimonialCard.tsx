@@ -1,10 +1,4 @@
-interface TestimonialProps {
-  name: string;
-  quote: string;
-  content: string;
-  avatarUrl: string;
-  className?: string;
-}
+import { TestimonialProps } from '@/types';
 
 export default function TestimonialCard({
   name,

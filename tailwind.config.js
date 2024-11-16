@@ -10,6 +10,10 @@ export default {
         'light-gray': 'hsl(0, 0%, 81%)',
         'light-grayish-blue': 'hsl(210, 46%, 95%)',
       },
+      screens: {
+        'custom': '1276px',
+        'medium-lg': '1022px',
+      },
     },
   },
   plugins: [],
