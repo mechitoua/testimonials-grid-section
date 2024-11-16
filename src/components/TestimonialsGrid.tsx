@@ -25,7 +25,7 @@ const TestimonialsGrid: React.FC<TestimonialsGridProps> = ({
   testimonials,
 }) => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 medium-lg:grid-cols-3 lg:grid-cols-4 gap-[24px] lg:gap-[30px]'>
+    <div className='grid grid-cols-1 gap-6 md:grid-cols-2 medium-lg:grid-cols-3 lg:grid-cols-4 lg:gap-7 w-full max-w-full'>
       {testimonials.map((testimonial, index) => (
         <div key={index} className={getGridItemClassName(index)}>
           <TestimonialCard {...testimonial} />
