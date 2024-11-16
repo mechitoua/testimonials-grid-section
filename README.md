@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: []()
+- Live Site URL: [https://mechitoua-testimonials-grid-section.vercel.app/](https://mechitoua-testimonials-grid-section.vercel.app/)
 
 ### Built with
 
